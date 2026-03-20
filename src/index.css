@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap");
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface2: #1a1a1a;
+  --color-border: #2a2a2a;
+  --color-border-bright: #3f3f3f;
+  --color-ink: #f0ede8;
+  --color-muted: #6b6660;
+  --color-dim: #3d3a37;
+
+  --color-lime: #e8ff47;
+  --color-lime-dim: rgba(232, 255, 71, 0.12);
+
+  --color-danger: #ff4747;
+  --color-danger-dim: rgba(255, 71, 71, 0.10);
+
+  --color-sky: #47b8ff;
+  --color-sky-dim: rgba(71, 184, 255, 0.10);
+
+  --color-mint: #47ffa3;
+  --color-mint-dim: rgba(71, 255, 163, 0.10);
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-spin-slow   { animation: spin-slow 0.8s linear infinite; }
+.animate-pulse-soft  { animation: pulse-soft 1.4s ease-in-out infinite; }
+.animate-slide-in    { animation: slide-in 0.22s ease forwards; }
+.animate-fade-up     { animation: fade-up 0.5s ease forwards; }
+
+/* hide number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+input[type="number"] { -moz-appearance: textfield; }
